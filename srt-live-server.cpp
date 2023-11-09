@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
 
     CSLSManager             *sls_manager = NULL;
     std:list <CSLSManager*>  reload_manager_list;
-    CHttpClient             *http_stat_client = new CHttpClient;
+    CHttpClient             *http_stat_client = NULL;
 
     int ret = SLS_OK;
     int l = sizeof(sockaddr_in);
