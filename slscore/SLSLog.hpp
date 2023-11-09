@@ -30,6 +30,7 @@
 #include <stdio.h>
 
 #include "common.hpp"
+#include "SLSSrt.hpp"
 #include "SLSLock.hpp"
 
 #define SLS_LOG_FATAL     0
@@ -45,6 +46,14 @@ static char const * LOG_LEVEL_NAME[] = {
 		"INFO",
 		"DEBUG",
 		"TRACE"
+};
+static int LOG_LEVEL_INTS[] = {
+		LOG_CRIT,
+		LOG_ERR,
+		LOG_WARNING,
+		LOG_INFO,
+		LOG_DEBUG,
+		LOG_DEBUG
 };
 
 

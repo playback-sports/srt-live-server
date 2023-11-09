@@ -28,6 +28,7 @@
 #include <stddef.h>
 #include <strings.h>
 
+#include "SLSSrt.hpp"
 #include "SLSLog.hpp"
 #include "SLSLock.hpp"
 
@@ -103,6 +104,7 @@ void CSLSLog::set_log_level(char * level)
         if (strcmp(level, LOG_LEVEL_NAME[i]) == 0) {
             m_pInstance->m_level = i;
             printf("set log level='%s'.\n" , level, LOG_LEVEL_NAME[i]);
+            srt_setloglevel(LOG_LEVEL_INTS[i]);
             return ;
         }
     }
